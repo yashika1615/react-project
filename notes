@@ -1,1 +1,21 @@
-react- 
+# react- most used frontend library
+# react js - js library for building user interfaces
+# component - do not repeat yourself
+
+# create react app - npx create-react-app app_name
+# cd app_name
+# npm or yarn start
+
+# most imp public and src folder
+
+# ReactDom.render()- controls the contents of the container you pass in.
+# Currently returns a reference to the root ReactComponent instance.
+
+# our first component in react Js
+# - three things are mandatory and that are
+#  import React from "react"
+#  any one function(functional component)
+#  it should always return JSX.
+
+# react is all about your components only
+
