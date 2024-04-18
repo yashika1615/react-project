@@ -1,3 +1,16 @@
+ react- a javascript library for building user interfaces
+ the user interface is the point of human-computer interaction and communication in a device. This can include display screens, keyboards , a mouse and the appearance of a desktop.
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
  react- most used frontend library
  react js - js library for building user interfaces
  component - do not repeat yourself
@@ -32,7 +45,135 @@ nested components
 components- building blocks of app
   <Header /> , <Content />, <Footer />
  allows us to make all the visible parts of our application
+like buttons, inputs or even entire pages
 
+every component is a javascript function that returns markup
+but since react is a javascript library the components dont return html markup they actually
+return something called jsx
 
+jsx !=html
+write in camelCase that mean html attributes like class becomes classname
+ 
+benefit of using javascript is that you can use dynamic javascript values
+in your jsx if you have data you can display that data in your jsx using curly braces
+like 
+    const planet='world'
+    <div> Hello{planet} </div>
+these curly braces can accept string, number directly to make your attributes dynamic
 
+js functions return only one thing and in react you can only return only one parent component so you
+    wrong- function App(){
+        return (
+            <Header />
+            <Main />
+        )
+    }
 
+   right-               
+   <div>                  
+     <Header />
+     <Main />
+     </div> 
+
+the wrong will give error that the - JSX 
+MUST HAVE ONE PARENT ELEMENT SO TO FIX THAT ERROR
+by wrapping those components in a div but if you dont want to add an extra component to the page so you can add an 
+empty component called a react fragment component
+  like 
+    <>
+    <Header />
+    <Main />
+    </>
+
+to pass data into another components is called props
+    function App(){
+    const text= 'YO'
+    return <Greeting />
+  }
+
+to make a prop create a name on the component you want to pass data to
+and set it equal to some value and then you can then use that prop in component
+you passed it to.
+Prop refers to properties on an object which you get in the parameters of each object
+to use a prop take it from the object like a normal javascript propery
+
+<Greeting text={'YO'} />
+  function Greetings(props){
+    return <h1> {props.text} </h1>
+  }
+
+can you pass anything as a prop? 
+    yes , you can even pass other components as props using 
+    the children prop if you make opening and closing tags for a component
+    in betwwen them these components are called as children and you can access them on the children prop of the parent
+
+  organization - organising our react components in the most optimal way
+   
+
+<parent>
+  <Child />
+</parent>
+   
+   function Parent(props){
+    return <div>{ props.children} </div>
+       }
+
+ children props is a great way for creating layout components when you want your children to have the same common layout
+
+key props- the key prop is another built-in prop to react 
+the key prop is used so that react component can tell one react component apart from another
+usually when you are creating a list with map function .
+A key is a uinque string or a number to identify a component youll usually
+know when you add a key because react will warn you in a console fortunately if you dont have a uniwue value for each item you can always
+use the current index from map function
+
+   key props
+   (built into react)
+<Component Key={'1'} />
+
+key= {1}        key="asddd"
+unique number     unique string
+
+no unique key value?
+  {items.map((item,index)=>(
+    <div key={index}>{item}</div>
+  ))}
+
+  use current index from the map function
+
+  how does react take soemthing from my code and display it on my browser
+    the process is called rendering
+how does renedering work- react does it for us 
+
+react knows how and when to render using virtual DOM 
+DOM stands for document object model which every browser uses to model
+all the html elements on a web page and when you draw it out it kind of looks like a tree
+
+react rendering steps-
+(1) if the state of your react app changes then react updates the
+    virtual dom which is quicker to update than the real dom
+(2) Then react uses a process called diffing to compare the updated
+    virtual dom to previous one to see whats changed  
+(3) when it sees what has changed react uses a process called reconciliation with the
+    dom to update the real dom with the changes that it found
+
+events- handling user interactions, namely by calling a function 
+whenever you use a app tons of events takes place like click, mouse movements and key presses
+many of which we need to detect Event handling is how we take those user events and do something
+ with them.
+
+react has a lot of built in events such as onclick, onchange and onsubmit
+    <button onClick={handleClick} />
+    <button onChange={handleChange} />
+    <button onSubmit={handleSubmit} />
+if we want to alert users when a button is clicked we would onclcik prop to the button
+and connect it to a function that would show that alert
+
+how to manage data in our react app?
+   useState- its like a snapshot our app at any given time to
+   manage state we cant use our javascript variables they dont cause our 
+   javascript app to render instead 
+use 
+   useState(), useRender() - special functions
+
+useStateHook -
