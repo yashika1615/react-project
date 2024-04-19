@@ -1,6 +1,9 @@
  react- a javascript library for building user interfaces
  the user interface is the point of human-computer interaction and communication in a device. This can include display screens, keyboards , a mouse and the appearance of a desktop.
  
+ component - piece of reusable code which can be used at any point of time and 
+ an individual piece of code which has its own inputs and which has its own outputs
+ and has its own functionality
  
  
  
