@@ -1,4 +1,3 @@
-import { } from "module";
 import React from "react";
 import "./App.css";
 
