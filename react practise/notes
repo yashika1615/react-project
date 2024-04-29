@@ -1,1 +1,15 @@
 npx - node package executor
+
+1. Dependency Version Locking: Locks exact versions.
+2. Specific Version Recording: Records exact nested dependency versions.
+3. Dependency Resolution: Ensures consistent installs.
+4. Consistency & Reproducibility: Same versions for all.
+5. Avoid Manual Editing: Risk of conflicts.
+
+In a nutshell,  `package-lock.json` lists and locks down specific versions of all project dependencies, ensuring consistent installations and preventing version conflicts. It's hands-off for manual edits to avoid potential issues.
+
+
+Simple one rule:
+ Filename: Capitalize e.g. Chai
+ File Extension: Always .jsx
+It doesn't matter if I return JSX or only Vanilla JS.  It simplifies my coding life a bit.
